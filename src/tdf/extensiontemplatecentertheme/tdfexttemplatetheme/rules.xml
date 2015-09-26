@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <notheme if-path="@@manage-viewlets" />
+    <notheme if="$ajax_load" />
+    
+    
+    
+    <!-- Apply the following rules to standard Plone pages -->
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <!-- Add meta tags -->
+        <drop css:content="link[href$='public.css']" />
+        <drop css:content="link[href$='columns.css']" />
+        <drop css:content="link[href$='forms.css']" />
+        <drop css:content="link[href$='portlets.css']" />
+        <drop css:content="link[href$='discussion.css']" />
+	<drop css:content="link[href$='controlpanel.css']" />
+	<drop css:content="link[href$='authoring.css']" />
+        <drop css:content="link[href$='ploneKss.css']" />
+        <drop css:content="link[href$='print.css']" />
+        <drop css:content="link[href$='mobile.css']" />
+        <drop css:content="link[href$='reset.css']" />
+        <drop css:content="link[href*='base']" />
+       
+    	<drop css:content="link[href$='favicon.ico']" />
+	
+	
+	
+	
+   </rules>
+    
+    
+    
+</rules>
